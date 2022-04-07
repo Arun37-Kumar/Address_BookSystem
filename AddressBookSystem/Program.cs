@@ -12,7 +12,9 @@ namespace AddressBookSystem
         {
             Console.WriteLine("Welcome to Address Book System : ");
             AddressBook add = new AddressBook("address", "firstname", "lastname", "city", "state", 1234567, 9876543210, "abc@gmail.com");
-            add.Show();
+            add.Add();
+            Console.WriteLine("-------------");
+            //add.Show();
             Console.ReadLine();
 
 

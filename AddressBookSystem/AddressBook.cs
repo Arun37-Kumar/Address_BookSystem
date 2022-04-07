@@ -29,10 +29,37 @@ namespace AddressBookSystem
             this.email = email;
         }
 
-        public void Create()
+        public void Add()
         {
-            Console.WriteLine("To create a new address book !");
-            Dictionary<string, string> data = new Dictionary<string, string>();
+            var zipcode = new List<int>();
+            var phoneNumber = new List<int>();
+
+            var address = new List<string>();
+            var firstname = new List<string>();
+            var lastname = new List<string>();
+            var city = new List<string>();
+            var state = new List<string>();
+            var email = new List<string>();
+            //Enter the inputs
+            Console.WriteLine("Enter address : ");
+            address.Add(Console.ReadLine());
+            Console.WriteLine("Enter firstname : ");
+            firstname.Add(Console.ReadLine());
+            Console.WriteLine("Enter lastname : ");
+            lastname.Add(Console.ReadLine());
+            Console.WriteLine("Enter city : ");
+            city.Add(Console.ReadLine());
+            Console.WriteLine("Enter state : ");
+            state.Add(Console.ReadLine());
+            Console.WriteLine("Enter email : ");
+            email.Add(Console.ReadLine());
+
+            Console.WriteLine("Enter zipcode : ");
+            zipcode.Add(Convert.ToInt32(Console.ReadLine()));
+            Console.WriteLine("Enter phone number : ");
+            phoneNumber.Add(Convert.ToInt32(Console.ReadLine()));
+
+
         }
 
         //Show
