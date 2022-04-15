@@ -11,8 +11,11 @@ namespace AddressBookSystem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book System : ");
-            AddressBook add = new AddressBook("address", "firstname", "lastname", "city", "state", 1234567, 9876543210, "abc@gmail.com");
-            add.Show();
+
+            Console.WriteLine("Enter the address book name : ");
+            string addressBookName = Console.ReadLine();
+            AddressBook newAddress = new AddressBook();
+            newAddress.CreateContacts(addressBookName);
             Console.ReadLine();
 
 
