@@ -54,5 +54,38 @@ namespace AddressBookSystem
             listContact.Add(objContact);
             Console.WriteLine("Contact has been Added to " + addressBook);
         }
+
+        internal void EditContact(string addressBook)
+        {
+            Console.WriteLine("Enter First Name");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Enter Second Name");
+            string lastname = Console.ReadLine();
+            bool personFound = false;
+            foreach (AddressBook item in listContact)
+            {
+                if ((((item.firstname).ToLower() == firstname.ToLower()) && ((item.lastname).ToLower() == lastname.ToLower())) && item.addressBook == addressBook)
+                {
+                    Console.WriteLine("Enter new Address");
+                    item.address = Console.ReadLine();
+                    Console.WriteLine("Enter new City");
+                    item.city = Console.ReadLine();
+                    Console.WriteLine("Enter new State");
+                    item.state = Console.ReadLine();
+                    Console.WriteLine("Enter new Address");
+                    item.zipcode = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter new Phone Number");
+                    item.phoneNumber = (int)Convert.ToInt64(Console.ReadLine());
+                    Console.WriteLine("Enter new Email");
+                    item.email = Console.ReadLine();
+                    personFound = true;
+                    Console.WriteLine("Details have been updated in " + addressBook);
+                }
+            }
+            if (personFound == false)
+            {
+                Console.WriteLine("Person not found");
+            }
+        }
     }
 }

@@ -16,7 +16,11 @@ namespace AddressBookSystem
             Console.WriteLine("Enter the address book name : ");
             string addressBookName = Console.ReadLine();
             AddressBook newAddress = new AddressBook();
+            //Create Contact
             newAddress.CreateContacts(addressBookName);
+            // Edit Address
+            newAddress.EditContact(addressBookName);
+
             Console.ReadLine();
 
 
