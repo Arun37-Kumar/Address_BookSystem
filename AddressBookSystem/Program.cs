@@ -20,7 +20,8 @@ namespace AddressBookSystem
             newAddress.CreateContacts(addressBookName);
             // Edit Address
             newAddress.EditContact(addressBookName);
-
+            //Delete Contact
+            newAddress.DeleteContact(addressBookName);
             Console.ReadLine();
 
 

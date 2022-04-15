@@ -87,5 +87,31 @@ namespace AddressBookSystem
                 Console.WriteLine("Person not found");
             }
         }
+
+        internal void DeleteContact(string addressBookName)
+        {
+            Console.WriteLine("Enter First Name");
+            string fName = Console.ReadLine();
+            Console.WriteLine("Enter Second Name");
+            string sName = Console.ReadLine();
+            bool personFound = false;
+            AddressBook personToDelete = new AddressBook();
+            foreach (AddressBook item in listContact)
+            {
+                if ((((item.firstname).ToLower() == fName.ToLower()) && ((item.lastname).ToLower() == sName.ToLower())) && item.addressBook == addressBookName)
+                {
+                    personToDelete = item;
+                    personFound = true;
+                    Console.WriteLine("Person has been Removed from Contacts in " + addressBookName);
+                }
+            }
+            listContact.Remove(personToDelete);
+            if (personFound == false)
+            {
+                Console.WriteLine("Person not found");
+            }
+        }
+
+
     }
 }
