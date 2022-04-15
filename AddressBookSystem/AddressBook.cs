@@ -112,6 +112,16 @@ namespace AddressBookSystem
             }
         }
 
+        internal void AllContacts(string addressBookName)
+        {
+            foreach (AddressBook item in listContact)
+            {
+                if (item.addressBook == addressBookName)
+                {
+                    Console.WriteLine(item.firstname + " " + item.lastname);
+                }
+            }
+        }
 
     }
 }
